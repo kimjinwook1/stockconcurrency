@@ -1,7 +1,6 @@
 package com.example.stock.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 import com.example.stock.domain.Stock;
 import com.example.stock.repository.StockRepository;

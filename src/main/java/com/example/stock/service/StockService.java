@@ -11,7 +11,8 @@ public class StockService {
 
 	private final StockRepository stockRepository;
 
-	public void decrease(Long id, Long quantity) {
+//	@Transactional
+	public synchronized void decrease(Long id, Long quantity) {
 		//get stock
 		Stock findStock = stockRepository.findById(id).orElseThrow();
 
