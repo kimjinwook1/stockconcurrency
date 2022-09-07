@@ -14,7 +14,7 @@ public class StockService {
 	private final StockRepository stockRepository;
 
 	@Transactional(propagation = Propagation.REQUIRES_NEW)
-	public synchronized void decrease(Long id, Long quantity) {
+	public void decrease(Long id, Long quantity) { //Named_Lock 시 synchronized 제거
 		//get stock
 		Stock findStock = stockRepository.findById(id).orElseThrow();
 
